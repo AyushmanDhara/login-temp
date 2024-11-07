@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Management Login</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Top Bar with Logo, Language, and Zoom Controls -->
+    <header class="top-bar">
+        <div class="logo">Hospital Management</div>
+        <div class="controls">
+            <select id="language-select">
+                <option value="en">English</option>
+                <option value="bn">বাংলা (Bengali)</option>
+                <option value="hi">हिंदी (Hindi)</option>
+            </select>
+            <button id="zoom-in">+</button>
+            <button id="zoom-out">-</button>
+        </div>
+    </header>
+
+    <!-- Main Container with Left and Right Sections -->
+    <div class="main-container">
+        <!-- Left Section: Login Area -->
+        <div class="login-section animated">
+            <div class="login-tabs">
+                <button id="customer-tab" class="tab active">Customer</button>
+                <button id="hospital-tab" class="tab">Hospital</button>
+            </div>
+            
+            <!-- Customer Login Form (default visible) -->
+            <div class="login-form active" id="customer-form">
+                <h1>Customer Login</h1>
+                <form>
+                    <input type="text" placeholder="Customer ID" required>
+                    <input type="password" placeholder="Password" required>
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+            
+            <!-- Hospital Login Form (initially hidden) -->
+            <div class="login-form hidden" id="hospital-form">
+                <h1>Hospital Login</h1>
+                <form>
+                    <input type="text" placeholder="Hospital ID" required>
+                    <input type="password" placeholder="Password" required>
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Right Section: Video Area -->
+        <div class="video-section animated">
+            <h1>Welcome to Our HOSPITEASE</h1>
+            <p>Watch our hospital overview to learn more about our services and care.</p>
+            <video controls width="100%">
+                <source src="hospital-intro.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
